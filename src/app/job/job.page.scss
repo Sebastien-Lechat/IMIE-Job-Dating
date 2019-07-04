@@ -1,0 +1,54 @@
+.title-job {
+    margin: 0%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    color: black;
+}
+
+.text-job {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descri-job {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-job {
+    margin-right: 2%;
+}
+
+.btn-job {
+    height: 8vh;
+    --border-radius: 10% 10% / 50% 50%;
+}
+
+.logo-card {
+    background-color: white;
+    .title-job {
+        color: black;
+    }
+}
+
+.compagny-card {
+    background-color: black;
+    margin: 0%;
+    border-radius: 0%;
+    box-shadow: none;
+    .title-job,
+    .text-job {
+        color: white;
+    }
+}

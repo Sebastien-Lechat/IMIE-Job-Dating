@@ -1,0 +1,7 @@
+{
+  "name": "JobDatingManager",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

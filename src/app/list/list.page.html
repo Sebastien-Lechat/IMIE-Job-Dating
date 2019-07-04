@@ -1,0 +1,170 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title class="title-header">
+            Ma liste de poste
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="card-head">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12" offset="">
+                    <h2 class="title-planning">
+                        &#60; JOB DATING /&#62;
+                    </h2>
+                </ion-col>
+                <ion-col size="12" offset="">
+                    <h2 class="subtitle-planning">
+                        Session 2
+                    </h2>
+                </ion-col>
+                <ion-col size="12" offset="">
+                    <h2 class="date-planning">
+                        Jeudi 14/07
+                    </h2>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+    <ion-card class="card-list" *ngFor="let item of job" (click)="presentModal(item)">
+        <ion-grid>
+            <ion-row align-items-center>
+                <ion-col size="4">
+                    <img src="{{ item['logo'] }}" alt="">
+                </ion-col>
+                <ion-col size="8">
+                    <h2 style="width:100%" class="text-list">{{ item['intitule'] }}</h2>
+                    <h2 style="width:100%" class="text-list">
+                        <ion-icon name="bookmark" class="icon-profil"></ion-icon>
+                        {{ item['Formation']['niveau'] }}</h2>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+    <ion-card class="card-list">
+        <ion-grid>
+            <ion-row align-items-center>
+                <ion-col size="4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/1022px-Orange_logo.svg.png" alt="">
+                </ion-col>
+                <ion-col size="8">
+
+                    <h2 style="width:100%" class="text-list">Développeur Full Stack JS</h2>
+                    <h2 style="width:100%" class="text-list">Bac+2</h2>
+
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+    <ion-card class="card-list">
+        <ion-grid>
+            <ion-row align-items-center>
+                <ion-col size="4">
+                    <img src="https://static.s-sfr.fr/media/sfr_logo2014_exe_rvb.png" alt="">
+                </ion-col>
+                <ion-col size="8">
+
+                    <h2 style="width:100%" class="text-list">Développeur Full Stack JS</h2>
+                    <h2 style="width:100%" class="text-list">Bac+2</h2>
+
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+    <ion-card class="card-list">
+        <ion-grid>
+            <ion-row align-items-center>
+                <ion-col size="4">
+                    <img src="https://i2.wp.com/hello-finance.com/wp-content/uploads/2018/05/BNP-Paribas.jpg?fit=620%2C346&ssl=1" alt="">
+                </ion-col>
+                <ion-col size="8">
+
+                    <h2 style="width:100%" class="text-list">Développeur Full Stack JS</h2>
+                    <h2 style="width:100%" class="text-list">Bac+2</h2>
+
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+    <ion-card class="card-list">
+        <ion-grid>
+            <ion-row align-items-center>
+                <ion-col size="4">
+                    <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/f/f7/Logo_Hachette_Livre_Actuel.svg/1280px-Logo_Hachette_Livre_Actuel.svg.png" alt="">
+                </ion-col>
+                <ion-col size="8">
+
+                    <h2 style="width:100%" class="text-list">Développeur Full Stack JS</h2>
+                    <h2 style="width:100%" class="text-list">Bac+2</h2>
+
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+    <ion-card class="card-list">
+        <ion-grid>
+            <ion-row align-items-center>
+                <ion-col size="4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/1022px-Orange_logo.svg.png" alt="">
+                </ion-col>
+                <ion-col size="8">
+
+                    <h2 style="width:100%" class="text-list">Développeur Full Stack JS</h2>
+                    <h2 style="width:100%" class="text-list">Bac+2</h2>
+
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+    <ion-card class="card-list">
+        <ion-grid>
+            <ion-row align-items-center>
+                <ion-col size="4">
+                    <img src="https://static.s-sfr.fr/media/sfr_logo2014_exe_rvb.png" alt="">
+                </ion-col>
+                <ion-col size="8">
+
+                    <h2 style="width:100%" class="text-list">Développeur Full Stack JS</h2>
+                    <h2 style="width:100%" class="text-list">Bac+2</h2>
+
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+    <ion-card class="card-list">
+        <ion-grid>
+            <ion-row align-items-center>
+                <ion-col size="4">
+                    <img src="https://i2.wp.com/hello-finance.com/wp-content/uploads/2018/05/BNP-Paribas.jpg?fit=620%2C346&ssl=1" alt="">
+                </ion-col>
+                <ion-col size="8">
+
+                    <h2 style="width:100%" class="text-list">Développeur Full Stack JS</h2>
+                    <h2 style="width:100%" class="text-list">Bac+2</h2>
+
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+    <ion-card class="card-list">
+        <ion-grid>
+            <ion-row align-items-center>
+                <ion-col size="4">
+                    <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/f/f7/Logo_Hachette_Livre_Actuel.svg/1280px-Logo_Hachette_Livre_Actuel.svg.png" alt="">
+                </ion-col>
+                <ion-col size="8">
+
+                    <h2 style="width:100%" class="text-list">Développeur Full Stack JS</h2>
+                    <h2 style="width:100%" class="text-list">Bac+2</h2>
+
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+
+</ion-content>

@@ -1,0 +1,25 @@
+.input-login {
+    margin-top: 5%;
+    border: black solid 2px;
+    --padding-end: 8px;
+    --padding-start: 8px;
+}
+
+.btn-login {
+    margin-top: 20%;
+    height: 8vh;
+    --border-radius: 10% 10% / 50% 50%;
+    font-size: 1.3rem;
+}
+
+.label-login {
+    margin-top: 5%;
+    font-size: 1.2rem;
+}
+
+.toast {
+    --background-color: black;
+    background-color: black;
+    color: white;
+    font-weight: 900;
+}

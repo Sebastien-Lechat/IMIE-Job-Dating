@@ -1,0 +1,65 @@
+.title-planning {
+    margin: 0%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+}
+
+.footer-planning {
+    margin: 0%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 900;
+    color: white;
+}
+
+.subtitle-planning {
+    margin: 0%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    color: #009FE3;
+}
+
+.text-planning {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-planning {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date-planning {
+    margin: 0%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+    color: #FFF02D;
+}
+
+.card-head {
+    margin: 10px 10px;
+    background-color: black;
+}
+
+.card-planning {
+    margin: 10px 10px;
+    background-color: white;
+    box-shadow: black 0px 1px 6px;
+    h2 {
+        margin: 0%;
+    }
+}

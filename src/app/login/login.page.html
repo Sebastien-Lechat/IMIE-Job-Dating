@@ -1,0 +1,35 @@
+<ion-content padding class="animated fadeIn login auth-page">
+    <div class="login-content">
+
+        <!-- Login form -->
+        <form class="list-form" (ngSubmit)="login()" #registerForm="ngForm">
+            <ion-grid>
+                <img src="https://www.defi-metiers.fr/sites/default/files/doc-kelios/Logo/2019/01/25/LOGO_IMIE-BASELINE-V2.png" alt="" width="100%">
+            </ion-grid>
+
+            <ion-grid>
+                <ion-grid class="label-login">
+                    <ion-label>
+                        <ion-icon name="mail"></ion-icon>
+                        Email
+                    </ion-label>
+                    <ion-input type="email" name="email" class="input-login" [(ngModel)]="loginCredentials.email"></ion-input>
+                </ion-grid>
+
+                <ion-grid class=" label-login ">
+                    <ion-label class="label-login ">
+                        <ion-icon name="lock"></ion-icon>
+                        Mot de Passe
+                    </ion-label>
+                    <ion-input type="password" name="password" class="input-login" [(ngModel)]="loginCredentials.password"></ion-input>
+                </ion-grid>
+            </ion-grid>
+            <ion-grid>
+                <ion-button expand="block" color="dark" class="btn-login " type="submit" [disabled]="!registerForm.form.valid">
+                    Connexion
+                    <ion-icon slot="end" name="send"></ion-icon>
+                </ion-button>
+            </ion-grid>
+        </form>
+    </div>
+</ion-content>
