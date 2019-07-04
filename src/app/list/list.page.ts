@@ -31,7 +31,7 @@ export class ListPage implements OnInit {
         console.log(data)
         this.data = data
         var size = Object.keys(data).length;
-        if(localStorage.getItem("role") == "Etudiant"){
+        if(localStorage.getItem("role") === "Etudiant"){
           for (let i = 0; i < size ; i++ ){
             if (data[i]["Entreprise"]){
               var sizeJob = Object.keys(data[i]["Entreprise"]["Job"]).length;
@@ -39,6 +39,7 @@ export class ListPage implements OnInit {
                 for (let j = 1; j < sizeJob ; j++ ){
                   if(data[i]["Entreprise"]["Job"][j]["Formation"]["niveau"] == localStorage.getItem("formation")){
                     data[i]["Entreprise"]["Job"][j]["logo"]= data[i]["Entreprise"]["logo"]
+                    data[i]["Entreprise"]["Job"][j]["nom_entreprise"] = data[i]["Entreprise"]["nom_entreprise"]
                     this.job.push(data[i]["Entreprise"]["Job"][j])                    
                   }
                 }
@@ -47,7 +48,7 @@ export class ListPage implements OnInit {
           }
         }
 
-        if(localStorage.getItem("role") == "Entreprise"){
+        if(localStorage.getItem("role") === "Entreprise"){
           for (let i = 0; i < size ; i++ ){
             if (data[i]["_id"] == localStorage.getItem("_id")){
               var sizeJob = Object.keys(data[i]["Entreprise"]["Job"]).length;
