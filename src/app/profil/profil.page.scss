@@ -8,8 +8,8 @@
 
 .text-profil {
     text-align: center;
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 32px;
+    font-weight: 400;
     color: black;
     display: flex;
     justify-content: center;
@@ -26,19 +26,25 @@
 }
 
 .logo-card {
-    background-color: white;
+    background-color: black;
+    height: 30%;
     .title-profil {
-        color: black;
+        color: white;
     }
 }
 
 .compagny-card {
-    background-color: black;
+    background-color: white;
     margin: 0%;
-    border-radius: 0%;
+    min-height: 65%;
+    border-radius: 8% 8% 0% 0%/ 6% 6%;
     box-shadow: none;
     .title-profil,
     .text-profil {
-        color: white;
+        color: black;
     }
+}
+
+ion-content {
+    --ion-background-color: #0000;
 }

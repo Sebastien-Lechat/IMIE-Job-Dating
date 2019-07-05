@@ -9,76 +9,29 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <!--
-    <ion-card class="logo-card">
-        <ion-grid>
-            <ion-row>
-                <ion-col size="4" offset="4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/1022px-Orange_logo.svg.png" alt="">
+<ion-content style="background-color: black">
+
+    <div class="logo-card" *ngIf="entreprise == true">
+        <ion-grid style="height:100%">
+            <ion-row align-items-center style="height:100%">
+                <ion-col size="4" offset="">
+                    <img src="{{ user['Entreprise']['logo'] }}" alt="" width="100%" height="100%" style="border-radius: 5%;">
                 </ion-col>
-                <ion-col size="12" offset="">
-                    <h2 class="title-profil">Orange</h2>
+                <ion-col size="8" offset="">
+                    <h2 class="title-profil" style="color: #FFF02D">ENTREPRISE</h2>
+                    <h2 class="title-profil" style="color: #41BEF0">{{ user['Entreprise']['nom_entreprise'] }}</h2>
                 </ion-col>
             </ion-row>
         </ion-grid>
-    </ion-card>
-    <ion-card>
-        <ion-card class="compagny-card">
-            <ion-grid>
-                <ion-row align-items-center>
-                    <ion-col size="12" offset="">
-                        <h3 class="title-profil">Vos informations:</h3>
-                    </ion-col>
-                </ion-row>
-            </ion-grid>
-        </ion-card>
+    </div>
+
+    <div *ngIf="entreprise == true" class="compagny-card">
         <ion-grid>
             <ion-row align-items-center>
-                <ion-col size="12" offset="">
-                    <h3 class="text-profil">
-                        Lechat Sébastien
-                    </h3>
-                </ion-col>
-                <ion-col size="12" offset="">
-                    <h3 class="text-profil">
-                        <ion-icon slot="start" name="mail" class="icon-profil"></ion-icon>
-                        seb_le@hotmail.fr
-                    </h3>
-                </ion-col>
-                <ion-col size="11" offset="">
-                    <h3 class="text-profil">
-                        <ion-icon slot="start" name="call" class="icon-profil"></ion-icon>
-                        06.01.48.73.86</h3>
+                <ion-col size="12" offset="" style="margin-bottom: 6%;">
+                    <h3 class="title-profil">INFORMATION :</h3>
                 </ion-col>
             </ion-row>
-        </ion-grid>
-    </ion-card> -->
-
-    <ion-card class="logo-card" *ngIf="entreprise == true">
-        <ion-grid>
-            <ion-row>
-                <ion-col size="4" offset="4">
-                    <img src="{{ user['Entreprise']['logo'] }}" alt="">
-                </ion-col>
-                <ion-col size="12" offset="">
-                    <h2 class="title-profil">{{ user['Entreprise']['nom_entreprise'] }}</h2>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </ion-card>
-
-    <ion-card *ngIf="entreprise == true">
-        <ion-card class="compagny-card">
-            <ion-grid>
-                <ion-row align-items-center>
-                    <ion-col size="12" offset="">
-                        <h3 class="title-profil">Vos informations:</h3>
-                    </ion-col>
-                </ion-row>
-            </ion-grid>
-        </ion-card>
-        <ion-grid>
             <ion-row align-items-center>
                 <ion-col size="12" offset="">
                     <h3 class="text-profil">
@@ -98,58 +51,25 @@
                 </ion-col>
             </ion-row>
         </ion-grid>
-    </ion-card>
+    </div>
 
-    <!--
-    <ion-card>
-        <ion-grid>
-            <ion-row>
-                <ion-col size="12" offset="">
-                    <h3 class="title-profil">Lechat Sébastien</h3>
-                </ion-col>
-                <ion-col size="12" offset="">
-                    <h3 class="text-profil">
-                        <ion-icon name="bookmark" class="icon-profil"></ion-icon>
-                        Bac +2
-                    </h3>
-                    <h3 class="text-profil">
-                        Developpeur Web & Web Mobile
-                    </h3>
-                </ion-col>
-                <ion-col size="12" offset="">
-                    <h3 class="text-profil">
-                        <ion-icon slot="start" name="mail" class="icon-profil"></ion-icon>
-                        seb_le@hotmail.fr
-                    </h3>
-                </ion-col>
-                <ion-col size="12" offset="">
-                    <h3 class="text-profil">
-                        <ion-icon slot="start" name="call" class="icon-profil"></ion-icon>
-                        06.01.48.73.86</h3>
-                </ion-col>
-                <ion-col size="12" offset="">
-                    <h3 class="text-profil">
-                        <ion-icon slot="start" name="home" class="icon-profil"></ion-icon>
-                        51 Avenue de l'Epargne
-                    </h3>
-                    <h3 class="text-profil">
-                        Morsang Sur Orge - 91390
-                    </h3>
-                </ion-col>
-                <ion-col size="12" offset="">
-                    <ion-button expand="block" color="dark" class="btn-profil">Obtenir le CV</ion-button>
-                </ion-col>
 
+    <div class="logo-card" *ngIf="etudiant == true">
+        <ion-grid style="height:100%">
+            <ion-row align-items-center style="height:100%">
+                <ion-col size="12" offset="">
+                    <h2 class="title-profil" style="color: #FFF02D">Etudiant</h2>
+                </ion-col>
+                <ion-col size="12" offset="">
+                    <h2 class="title-profil" style="color: #41BEF0">{{ user.nom }} {{ user.prenom }}</h2>
+                </ion-col>
             </ion-row>
         </ion-grid>
-    </ion-card> -->
-
-    <ion-card *ngIf="etudiant == true">
+    </div>
+    <div *ngIf="etudiant == true" class="compagny-card">
         <ion-grid>
             <ion-row>
-                <ion-col size="12" offset="">
-                    <h3 class="title-profil">{{ user.nom }} {{ user.prenom }}</h3>
-                </ion-col>
+
                 <ion-col size="12" offset="">
                     <h3 class="text-profil">
                         <ion-icon name="bookmark" class="icon-profil"></ion-icon>
@@ -185,5 +105,5 @@
 
             </ion-row>
         </ion-grid>
-    </ion-card>
+    </div>
 </ion-content>
