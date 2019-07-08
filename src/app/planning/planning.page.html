@@ -31,12 +31,12 @@
             </ion-row>
         </ion-grid>
     </div>
-    <ion-card class="card-planning">
+    <ion-card class="card-planning" *ngFor="let item of rencontre" (click)="presentModal(item.info_etudiant)">
         <ion-grid>
             <ion-row align-items-center>
                 <ion-col size="6" offset="">
                     <h2 class="text-planning">
-                        Sébastien Lechat
+                        {{ item.info_etudiant.nom }} {{ item.info_etudiant.prenom }}
                     </h2>
                 </ion-col>
                 <ion-col size="3">
@@ -44,182 +44,25 @@
                         18h00
                     </h2>
                 </ion-col>
-                <ion-col size="3" offset="">
-                    <h2 class="status-planning">
+                <ion-col size="3" offset="" *ngIf="item.status == 1">
+                    <h2 class="status-planning" style="color:green">
+                        <ion-icon name="square"></ion-icon>
+                    </h2>
+                </ion-col>
+                <ion-col size="3" offset="" *ngIf="item.status == 2">
+                    <h2 class="status-planning" style="color:red">
+                        <ion-icon name="square"></ion-icon>
+                    </h2>
+                </ion-col>
+                <ion-col size="3" offset="" *ngIf="item.status == 3">
+                    <h2 class="status-planning" style="color:orange">
                         <ion-icon name="square"></ion-icon>
                     </h2>
                 </ion-col>
             </ion-row>
         </ion-grid>
     </ion-card>
-    <ion-card class="card-planning">
-        <ion-grid>
-            <ion-row align-items-center>
-                <ion-col size="6" offset="">
-                    <h2 class="text-planning">
-                        Sébastien Lechat
-                    </h2>
-                </ion-col>
-                <ion-col size="3">
-                    <h2 class="text-planning">
-                        18h00
-                    </h2>
-                </ion-col>
-                <ion-col size="3" offset="">
-                    <h2 class="status-planning">
-                        <ion-icon name="square"></ion-icon>
-                    </h2>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </ion-card>
-    <ion-card class="card-planning">
-        <ion-grid>
-            <ion-row align-items-center>
-                <ion-col size="6" offset="">
-                    <h2 class="text-planning">
-                        Sébastien Lechat
-                    </h2>
-                </ion-col>
-                <ion-col size="3">
-                    <h2 class="text-planning">
-                        18h00
-                    </h2>
-                </ion-col>
-                <ion-col size="3" offset="">
-                    <h2 class="status-planning">
-                        <ion-icon name="square"></ion-icon>
-                    </h2>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </ion-card>
-    <ion-card class="card-planning">
-        <ion-grid>
-            <ion-row align-items-center>
-                <ion-col size="6" offset="">
-                    <h2 class="text-planning">
-                        Sébastien Lechat
-                    </h2>
-                </ion-col>
-                <ion-col size="3">
-                    <h2 class="text-planning">
-                        18h00
-                    </h2>
-                </ion-col>
-                <ion-col size="3" offset="">
-                    <h2 class="status-planning">
-                        <ion-icon name="square"></ion-icon>
-                    </h2>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </ion-card>
-    <ion-card class="card-planning">
-        <ion-grid>
-            <ion-row align-items-center>
-                <ion-col size="6" offset="">
-                    <h2 class="text-planning">
-                        Sébastien Lechat
-                    </h2>
-                </ion-col>
-                <ion-col size="3">
-                    <h2 class="text-planning">
-                        18h00
-                    </h2>
-                </ion-col>
-                <ion-col size="3" offset="">
-                    <h2 class="status-planning">
-                        <ion-icon name="square"></ion-icon>
-                    </h2>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </ion-card>
-    <ion-card class="card-planning">
-        <ion-grid>
-            <ion-row align-items-center>
-                <ion-col size="6" offset="">
-                    <h2 class="text-planning">
-                        Sébastien Lechat
-                    </h2>
-                </ion-col>
-                <ion-col size="3">
-                    <h2 class="text-planning">
-                        18h00
-                    </h2>
-                </ion-col>
-                <ion-col size="3" offset="">
-                    <h2 class="status-planning">
-                        <ion-icon name="square"></ion-icon>
-                    </h2>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </ion-card>
-    <ion-card class="card-planning">
-        <ion-grid>
-            <ion-row align-items-center>
-                <ion-col size="6" offset="">
-                    <h2 class="text-planning">
-                        Sébastien Lechat
-                    </h2>
-                </ion-col>
-                <ion-col size="3">
-                    <h2 class="text-planning">
-                        18h00
-                    </h2>
-                </ion-col>
-                <ion-col size="3" offset="">
-                    <h2 class="status-planning">
-                        <ion-icon name="square"></ion-icon>
-                    </h2>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </ion-card>
-    <ion-card class="card-planning">
-        <ion-grid>
-            <ion-row align-items-center>
-                <ion-col size="6" offset="">
-                    <h2 class="text-planning">
-                        Sébastien Lechat
-                    </h2>
-                </ion-col>
-                <ion-col size="3">
-                    <h2 class="text-planning">
-                        18h00
-                    </h2>
-                </ion-col>
-                <ion-col size="3" offset="">
-                    <h2 class="status-planning">
-                        <ion-icon name="square"></ion-icon>
-                    </h2>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </ion-card>
-    <ion-card class="card-planning">
-        <ion-grid>
-            <ion-row align-items-center>
-                <ion-col size="6" offset="">
-                    <h2 class="text-planning">
-                        Sébastien Lechat
-                    </h2>
-                </ion-col>
-                <ion-col size="3">
-                    <h2 class="text-planning">
-                        18h00
-                    </h2>
-                </ion-col>
-                <ion-col size="3" offset="">
-                    <h2 class="status-planning">
-                        <ion-icon name="square"></ion-icon>
-                    </h2>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </ion-card>
+
 
     <ion-card class="card-planning">
         <ion-grid>
@@ -241,7 +84,8 @@
             </ion-row>
         </ion-grid>
     </ion-card>
-    <div class="card-head" onclick="console.log('ok')" style="margin: 0%">
+
+    <div class="card-head" style="margin: 0%;">
         <ion-grid>
             <ion-row align-items-center>
                 <ion-col size="9" offset="">
@@ -249,15 +93,6 @@
                 </ion-col>
                 <ion-col size="3" offset="">
                     <ion-toggle color="success" checked></ion-toggle>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </div>
-    <div class="card-head" onclick="console.log('ok')" style="margin: 0%">
-        <ion-grid>
-            <ion-row align-items-center>
-                <ion-col size="8" offset="2">
-                    <h3 class="footer-planning">Bon courage !</h3>
                 </ion-col>
             </ion-row>
         </ion-grid>

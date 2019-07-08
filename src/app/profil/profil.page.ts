@@ -41,6 +41,7 @@ export class ProfilPage implements OnInit {
           }else{
             this.entreprise = true
             localStorage.setItem('role', 'Entreprise');
+            localStorage.setItem('nom_entreprise', data[i]['Entreprise']['nom_entreprise']);
           }
         }
       }

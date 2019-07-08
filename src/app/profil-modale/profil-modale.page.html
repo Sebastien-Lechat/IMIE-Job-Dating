@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-button slot="start" (click)="close()" type="button">
+            <ion-icon name="arrow-round-back"></ion-icon>
+        </ion-button>
+        <ion-title class="title-header">Profil de l'Etudiant</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content style="background-color: black">
+    <div class="logo-card" *ngIf="etudiant == true">
+        <ion-grid style="height:100%">
+            <ion-row align-items-center style="height:100%">
+                <ion-col size="12" offset="">
+                    <h2 class="title-profil" style="color: #FFF02D">Etudiant</h2>
+                </ion-col>
+                <ion-col size="12" offset="">
+                    <h2 class="title-profil" style="color: #41BEF0">{{ user.nom }} {{ user.prenom }}</h2>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+    <div *ngIf="etudiant == true" class="compagny-card">
+        <ion-grid>
+            <ion-row>
+
+                <ion-col size="12" offset="">
+                    <h3 class="text-profil">
+                        <ion-icon name="bookmark" class="icon-profil"></ion-icon>
+                        {{ user['Etudiant']['Formation']['niveau'] }}
+                    </h3>
+                    <h3 class="text-profil">
+                        {{ user['Etudiant']['Formation']['nom_formation'] }}
+                    </h3>
+                </ion-col>
+                <ion-col size="12" offset="">
+                    <h3 class="text-profil">
+                        <ion-icon slot="start" name="mail" class="icon-profil"></ion-icon>
+                        {{ user['Etudiant']['email'] }}
+                    </h3>
+                </ion-col>
+                <ion-col size="12" offset="">
+                    <h3 class="text-profil">
+                        <ion-icon slot="start" name="call" class="icon-profil"></ion-icon>
+                        {{ user['Etudiant']['telephone_student'] }}</h3>
+                </ion-col>
+                <ion-col size="12" offset="">
+                    <h3 class="text-profil">
+                        <ion-icon slot="start" name="home" class="icon-profil"></ion-icon>
+                        {{ user['Etudiant']['adresse_student'] }}
+                    </h3>
+                    <h3 class="text-profil">
+                        {{ user['Etudiant']['ville_student'] }} - {{ user['Etudiant']['cp_student'] }}
+                    </h3>
+                </ion-col>
+                <ion-col size="12" offset="">
+                    <ion-button expand="block" color="dark" class="btn-profil">Voir le CV</ion-button>
+                </ion-col>
+
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>

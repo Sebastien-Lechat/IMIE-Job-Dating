@@ -17,13 +17,21 @@ const routes: Routes = [
   { path: 'profil', 
   loadChildren: './profil/profil.module#ProfilPageModule' 
   },
-  { path: 'planning',
+  { 
+    path: 'planning',
    loadChildren: './planning/planning.module#PlanningPageModule' 
   },
-  { path: 'list',
-    loadChildren: './list/list.module#ListPageModule' },
-  { path: 'job', 
-  loadChildren: './job/job.module#JobPageModule' }
+  { 
+    path: 'list',
+    loadChildren: './list/list.module#ListPageModule' 
+  },
+  { 
+    path: 'job', 
+  loadChildren: './job/job.module#JobPageModule' 
+  },
+  { 
+    path: 'profil-modale',
+   loadChildren: './profil-modale/profil-modale.module#ProfilModalePageModule' }
 ];
 
 @NgModule({

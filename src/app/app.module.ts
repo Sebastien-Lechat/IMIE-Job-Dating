@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -15,8 +16,9 @@ import { NativeStorage } from '@ionic-native/native-storage/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ListPage } from './list/list.page';
 import { JobPageModule } from './job/job.module';
+import { ProfilModalePageModule } from './profil-modale/profil-modale.module';
+import { RencontreService } from './services/rencontre/rencontre.service';
 
 
 
@@ -29,7 +31,8 @@ import { JobPageModule } from './job/job.module';
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
-    JobPageModule,  
+    JobPageModule,
+    ProfilModalePageModule  
   ],
   providers: [
     StatusBar,
@@ -37,7 +40,7 @@ import { JobPageModule } from './job/job.module';
     HTTP,
     File,
     NativeStorage,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: HTTP_INTERCEPTORS, useClass: RencontreService, multi:true }
   ],
   bootstrap: [AppComponent]
 })
