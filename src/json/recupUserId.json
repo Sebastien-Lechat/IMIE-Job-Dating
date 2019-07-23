@@ -1,0 +1,24 @@
+{
+	"_id" : "5d15ceb5326e442fa8ed3078",
+	"email" : "c@c.c",
+	"password" : "$2a$10$T4Hr.y.2SCIIEtwVUKkCpuv0FpTbtMQhtsuQte5u4lef.GR3TRsFC",
+	"nom" : "didi",
+	"prenom" : "enfoeznf",
+	"sexe" : "Homme",
+	"role" : "STUDENT",
+	"Etudiant" : {
+				"email" : "c@c.c",
+				"age" : "12",
+				"adresse" : "5 rue de ma couille",
+				"cp" : "51051",
+				"ville" : "Oui",
+				"link_cv" : "lien",
+				"telephone" : "0102030405",
+				"Formation" : {
+							"niveau" : "License",
+							"nom_formation" : "CDI"
+				}
+	},
+	"createdAt" : "2019-06-28T08:24:21.590Z",
+	"updatedAt" : "2019-06-28T08:24:21.590Z"
+}

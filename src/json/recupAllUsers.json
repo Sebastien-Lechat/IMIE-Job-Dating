@@ -1,0 +1,58 @@
+[{
+	"_id" : "5d15cc98deef652f2dbabc5b",
+	"email" : "b@b.b",
+	"password" : "$2a$10$0gGsWOLwbFAP6omEZlFXi.LFfhQ6uKFkjY8PErB2.sS2sEV6wgkRe",
+	"nom" : "didi",
+	"prenom" : "enfoeznf",
+	"sexe" : "Homme",
+	"role" : "COMPANY",
+	"Entreprise" : {
+		"email" : "b@b.b",
+		"nom" : "didi",
+		"prenom" : "enfoeznf",
+		"logo" : "url",
+		"nom_entreprise" : "Orange",
+		"siege" : "Chauffant",
+		"description" : "Oui",
+		"adresse" : "5 rue de ma couille",
+		"cp" : "51051",
+		"ville" : "Oui",
+		"telephone" : "0102030405",
+		"cocktail" : "True",
+		"video" : "url",
+		"Job" : [
+			{}
+		]
+	},
+	"createdAt" : "2019-06-28T08:15:20.969Z",
+	"updatedAt" : "2019-06-28T08:15:20.969Z"
+},
+{
+		"_id" : "5d15cc98deef652f2dbabc5b",
+		"email" : "b@b.b",
+		"password" : "$2a$10$0gGsWOLwbFAP6omEZlFXi.LFfhQ6uKFkjY8PErB2.sS2sEV6wgkRe",
+		"nom" : "didi",
+		"prenom" : "enfoeznf",
+		"sexe" : "Homme",
+		"role" : "COMPANY",
+		"Entreprise" : {
+			"email" : "b@b.b",
+			"nom" : "didi",
+			"prenom" : "enfoeznf",
+			"logo" : "url",
+			"nom_entreprise" : "Orange",
+			"siege" : "Chauffant",
+			"description" : "Oui",
+			"adresse" : "5 rue de ma couille",
+			"cp" : "51051",
+			"ville" : "Oui",
+			"telephone" : "0102030405",
+			"cocktail" : "True",
+			"video" : "url",
+			"Job" : [
+				{}
+			]
+		},
+		"createdAt" : "2019-06-28T08:15:20.969Z",
+		"updatedAt" : "2019-06-28T08:15:20.969Z"
+}]
